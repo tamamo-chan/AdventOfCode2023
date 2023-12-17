@@ -61,5 +61,7 @@ text = File.ReadAllText(dec4Input).Split(
 );
 
 ScratchcardCollection scratchcardCollection = new(text);
+ScratchcardCollectionV2 scratchcardCollectionV2 = new(text);
 
 Console.WriteLine("December 4th, first answer: " + scratchcardCollection.CountCollection());
+Console.WriteLine("December 4th, second answer: " + scratchcardCollectionV2.CountCollection());
