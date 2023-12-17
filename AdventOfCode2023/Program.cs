@@ -1,6 +1,7 @@
 ﻿using AdventOfCode2023.AdventOfCodeDec1;
 using AdventOfCode2023.AdventOfCodeDec2;
 using AdventOfCode2023.AdventOfCodeDec3;
+using AdventOfCode2023.AdventOfCodeDec4;
 
 string input = "C:\\Users\\Piratica\\source\\repos\\AdventOfCode2023\\AdventOfCode2023\\";
 
@@ -43,9 +44,22 @@ text = File.ReadAllText(dec3Input).Split(
         StringSplitOptions.RemoveEmptyEntries
 );
 
-EngineSchematicsReader engineReader = new EngineSchematicsReader(text);
-GearRatioReader gearRatioReader = new GearRatioReader(text);
+EngineSchematicsReader engineReader = new(text);
+GearRatioReader gearRatioReader = new(text);
 
 Console.WriteLine("December 3rd, first answer: " + engineReader.squareReader());
 
 Console.WriteLine("December 3rd, second answer: " + gearRatioReader.squareReader());
+
+
+
+// DEC 4
+string dec4Input = input + "AdventOfCodeDec4\\input.txt";
+text = File.ReadAllText(dec4Input).Split(
+        new String[] { "\n" },
+        StringSplitOptions.RemoveEmptyEntries
+);
+
+ScratchcardCollection scratchcardCollection = new(text);
+
+Console.WriteLine("December 4th, first answer: " + scratchcardCollection.CountCollection());

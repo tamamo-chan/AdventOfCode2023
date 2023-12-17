@@ -2,7 +2,7 @@ using AdventOfCode2023.AdventOfCodeDec3;
 
 namespace AdventOfCodeDec3Tests
 {
-    public class AdventOfCodeDec2Tests
+    public class AdventOfCodeDec3Tests
     {
         [Fact]
         public void EngineSchematicReader_SpecCharLeftRight()
